@@ -3,7 +3,7 @@ Implemented KNN from scratch using numpy on MNIST dataset (60k training, 10k tes
 
 Given number of training samples is n each having d number of features
 
-## Time Complexity: 
+## Time & Space Complexity: 
 
 Training: KNN has no explicit training. Hence O(1)
 
