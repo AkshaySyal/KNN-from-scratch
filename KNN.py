@@ -10,16 +10,20 @@ class KNN:
         data = data.reshape(data.shape[0],-1) # Flattening images, (60k,28,28) -> (60k,784)
         data[data > 0] = 1 # Boolean Indexing
         return data
+    
+    def predict(self,test):
+        test = self.transform(test)
+        predictions = []
+        for t in test:
+            predictions.append(self.predict_single(t))
+        
+        return predictions
 
     def fit(self,train,labels):
         train = self.transform(train)
         self.data = train
         self.labels = labels
-
-    def predict(self,test):
-        test = self.transform(test)
-        
-    
+  
     def predict_single(self,t):
         heap = list()
 
@@ -34,5 +38,3 @@ class KNN:
             lbls.append(lbl)
         
         return max(set(lbls), key=lbls.count)
-
-
