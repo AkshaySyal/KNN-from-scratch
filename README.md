@@ -14,3 +14,6 @@ Store only k shortest distances in an array. After appending distance sort the a
 
 Space Complexity: Θ(n*d) 
 Have to store the entire training data at run time during prediction
+
+Test Accuracy: 0.7177
+Time taken to run the code: 1413.8525 seconds
